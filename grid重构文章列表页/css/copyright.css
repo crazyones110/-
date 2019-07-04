@@ -1,0 +1,41 @@
+.copyright-box {
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+    /* background-color: rgba(144, 206, 177, 0.4); */
+    margin-top: 40px;
+}
+
+/* ************************************************************** */
+
+.webpage-link-box, .copyright, .contact {
+    width: 100%;
+    text-align: center;
+    font-size: 10pt;
+    color: #666;
+    height: 20px;
+    line-height: 20px;
+}
+
+.webpage-link-box {
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
+.link-item {
+    margin: 0 5px;
+}
+
+.link-item a {
+    color: #666;
+}
+
+.link-item a:hover {
+    color: #a00;
+    text-decoration: underline;
+}
+.copyright-box li,
+.copyright-box a{
+    display: inline;
+}    
