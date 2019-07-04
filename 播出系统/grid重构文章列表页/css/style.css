@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*::after,*::before{
+    box-sizing: border-box;
+}
+ul,ol{
+    list-style: none;
+}
+body{
+    display: grid;
+    grid: 66px auto 100px / auto 60% auto 20% auto;
+    grid-row-gap: 30px;
+    background-color: rgb(244, 245, 246);
+}
+.topNavBar{
+    grid-area: 1 / 1 / 2 / -1;
+    background-color: white;
+    border-bottom: 1px solid #999;
+    display: flex;
+    justify-content: center;
+}
+.topNavBar>.navContainer{
+    width: 66%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: flex-start;
+}
+.topNavBar>.navContainer>.logoWrapper{
+    height: 100%;
+    width: 180px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.topNavBar>.navContainer>.logoWrapper>img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.topNavBar>.navContainer>.navItems{
+    flex-grow: 2;
+}
+.topNavBar>.navContainer>.navItems>ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    height: 100%;
+    margin-left: 20px;
+}
+.navItems>ul>li{
+    padding:0 5px;
+    display: flex;
+    align-items: center;
+}
+.navItems>ul>li>a{
+    color: black;
+}
+.navItems>ul>li:hover{
+    background-color: rgb(165, 42, 42);
+}
+.navItems>ul>li:hover>a{
+    color: white;
+}
+.topNavBar>.navContainer>.userItems{
+    flex-grow: 1;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.topNavBar>.navContainer>.userItems>a{
+    color: black;
+}
+.topNavBar>.navContainer>.userItems>a:hover{
+    color: blue;
+}
+
+
+
+
+.leftBlock{
+    grid-area: 2 / 2 / 3 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.leftBlock>.mainNews{
+    height: 300px;
+    width: 100%;
+    display: flex;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.72);
+}
+.leftBlock>.mainNews>.mainNewsImg{
+    flex: 0 0 70%;
+    height: 100%;
+    background-image: url(../imgs/莱昂纳德.jpg);
+    background-size: contain;   
+}
+
+.leftBlock>.mainNews>.mainNewsText{
+    flex: 0 0 30%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+.leftBlock>.mainNews>.mainNewsText>.mainTitle{
+    padding: 3px 15px;
+    /* border: 1px solid blue; */
+    font-size: 25px;
+    flex-grow: 1;
+    overflow: hidden;
+}
+.leftBlock>.mainNews>.mainNewsText>.mainSubtitle{
+    padding: 3px 15px;
+    /* border: 1px solid blue; */
+    font-size: 15px;
+    flex-grow: 2;
+    overflow: hidden;
+}
+.listNews{
+    margin-top: 30px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.72);
+    background-color: #fff;
+}
+.listNews>ul{
+    display: flex;
+    flex-direction: column;
+}
+.listNews>ul>li{
+    padding: 30px;
+    /* border: 1px solid red; */
+    display: flex;
+    border-bottom: 1px solid #e9e9e9;
+}
+.listNews>ul>li>.newsImg{
+    height: 200px;
+    /* border:1px solid red; */
+    flex:0 0 30%;
+    background-image: url(../imgs/验钞机.jpg);
+    background-size: contain;
+}
+.listNews>ul>li>div:nth-child(2){
+    flex: 0 0 60%;
+    font-size: 20px;
+    margin-left: 30px;
+}
+.rightBlock{
+    grid-area: 2 / 4 / 3 / 5;
+    /* border: 1px solid red; */
+    display: grid;
+    grid: 40px auto/ 225px auto 80px;
+    grid-row-gap: 30px;
+    /* justify-items: end; */
+    /* align-self: start; */
+}
+.rightBlock>input{
+    grid-area: 1 / 1 / 2 / 2;
+}
+.rightBlock>button{
+    grid-area: 1 / 3 / 2 / -1;
+    background-color: rgb(119, 176, 246);
+    border: none;
+    color: white;
+    font-size: 16px;
+}
+.rightBlock>button:hover{
+    box-shadow: 3px 3px 3px 0px rgba(120,176,246,0.75);
+}
+.rightBlock>button:active{
+    /* opacity: .7; */
+    position: relative;
+    top:1px;
+}
+.rightBlock>button:focus{
+    outline: none;
+}
+.rightBlock>.sideNews{
+    grid-area: 2 / 1 / 3 / -1;
+    display: flex;
+    flex-direction: column;
+}
+ul.sideNews>li{
+    flex: 0 0 240px;
+    /* border: 1px solid red; */
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.72);
+    border-top: 2px solid red;
+    background-color: #fff;
+}
+.sideNews>li>div{
+    font-size: 20px;
+    padding: 5px 2px;
+}
+.sideNews>li>ol{
+    counter-reset: counter;
+}
+.sideNews>li>ol>li{
+    font-size: 15px;
+    height: 20px;
+    /* padding: 15px 20px; */
+    margin: 15px 20px;
+    position: relative;
+}
+.sideNews>li>ol>li::before{
+    counter-increment: counter;
+    content: counter(counter);
+    color: blue;
+    font-size: 20px;
+    position: absolute;
+    right: 101%;
+    bottom: -6%;
+}
+.sideNews>li{
+    margin-bottom: 80px;
+}
+.copyright-box{
+    grid-area: 3 / 1 / -1 / -1;
+}
