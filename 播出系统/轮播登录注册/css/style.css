@@ -115,12 +115,10 @@ body{
     width: 380px;
     margin: 20px auto;
 }
-.loginWrapper>.back> a{
-    text-decoration: none;
-    /* color: white;     */
-    color: black;
+.loginWrapper>.back>span{
+    cursor: pointer;
 }
-.loginWrapper>.back> a:hover{
+.loginWrapper>.back>span:hover{
     color: blue;
 }
 .loginWrapper>button{
@@ -224,12 +222,10 @@ body{
     width: 380px;
     margin: 20px auto;
 }
-.registerWrapper>.back> a{
-    text-decoration: none;
-    /* color: white;     */
-    color: black;
+.registerWrapper>.back> span{
+    cursor: pointer;
 }
-.registerWrapper>.back>a:hover{
+.registerWrapper>.back>span:hover{
     color: blue;
 }
 .registerWrapper>button{
