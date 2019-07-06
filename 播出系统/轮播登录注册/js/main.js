@@ -1,10 +1,10 @@
-$(".loginWrapper>.back>a").on('click',function(){
+$(".loginWrapper>.back>span").on('click',function(){
     $(".loginWrapper").toggleClass("animate");
     $(".registerWrapper").toggleClass("animate");
-    console.log("clicked")
+    console.log("注册");
 });
-$(".registerWrapper>.back>a").on('click',function(){
+$(".registerWrapper>.back>span").on('click',function(){
     $(".loginWrapper").toggleClass("animate");
     $(".registerWrapper").toggleClass("animate");
-    console.log("clicked")
+    console.log("登录");
 });
