@@ -1,0 +1,270 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../img/头条背景.png);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.carouselWrapper{
+    width: 410px;
+    height: 435px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.loginWrapper>.telreg{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+.loginWrapper>.hr{
+    width: 380px;
+    margin: 20px auto;
+    height: 0;
+    border: 1px solid #e9e9e9;
+}
+.loginWrapper>.tel{
+    /* margin-top: 66px; */
+    height: 40px;
+    margin-bottom:20px; 
+    position: relative;
+}
+.loginWrapper>.tel>.alert{
+    position: absolute;
+    right: 25px;
+    top: 10px;
+    color: white;
+}
+.loginWrapper>.tel>input{
+    display: block;
+    font-size: 20px;
+    line-height: 40px;
+    width: 380px;
+    margin: 20px auto;
+    border: 1px solid #e9e9e9;
+    border-radius: 10px 10px 10px 10px;
+}
+.loginWrapper>.verify{
+    /* margin-top: 66px; */
+    height: 40px;
+    margin-bottom:20px; 
+    border: 1px solid #e9e9e9;
+    border-radius: 10px 10px 10px 10px;
+    width: 380px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    /* justify-content: center; */
+}
+.loginWrapper>.verify::after{
+    content: '';
+    display: block;
+    height: 80%;
+    width: 0;
+    border: 1px solid #e9e9e9;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+}
+.loginWrapper>.verify>input{
+    flex: none;
+    display: block;
+    font-size: 20px;
+    line-height: 40px;
+    float: left;
+    /* border: 1px solid #e9e9e9; */
+    /* border-right: 0; */
+    border: 0;
+    width: 50%;
+}
+.loginWrapper>.verify>#send{
+    float: left;
+    height: 40px;
+    background-color: white;
+    border: none;
+    display: block;
+    font-size: 20px;
+    width: 50%;
+    flex: none;
+}
+.loginWrapper>.pwd>input{
+    display: block;
+    font-size: 20px;
+    line-height: 40px;
+    width: 380px;
+    margin: 20px auto;
+    border: 1px solid #e9e9e9;
+    border-radius: 10px 10px 10px 10px; 
+}
+.loginWrapper>.back{
+    width: 380px;
+    margin: 20px auto;
+}
+.loginWrapper>.back> a{
+    text-decoration: none;
+    /* color: white;     */
+    color: black;
+}
+.loginWrapper>.back> a:hover{
+    color: blue;
+}
+.loginWrapper>button{
+    width: 380px;
+    margin: 0 auto 20px auto;
+    display: block;
+    height: 40px;
+    font-size: 20px;
+    background-color: rgb(248, 89, 89);
+    border-radius: 10px 10px 10px 10px;
+    border: 1px solid #e9e9e9;
+    color: white;
+}
+
+.registerWrapper>.telreg{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+.registerWrapper>.hr{
+    width: 380px;
+    margin: 20px auto;
+    border: 1px solid #e9e9e9;
+}
+.registerWrapper>.tel{
+    /* margin-top: 66px; */
+    height: 40px;
+    margin-bottom:20px; 
+    position: relative;
+}
+.registerWrapper>.tel>.alert{
+    position: absolute;
+    right: 25px;
+    top: 10px;
+    color: white;
+}
+/* .registerWrapper>.tel>.alert.dis{
+    position: absolute;
+    right: 25px;
+    top: 10px;
+    color: red;
+} */
+.registerWrapper>.tel>input{
+    display: block;
+    font-size: 20px;
+    line-height: 40px;
+    width: 380px;
+    margin: 20px auto;
+    border: 1px solid #e9e9e9;
+    border-radius: 10px 10px 10px 10px;
+}
+.registerWrapper>.verify{
+    /* margin-top: 66px; */
+    height: 40px;
+    margin-bottom:20px; 
+    border: 1px solid #e9e9e9;
+    border-radius: 10px 10px 10px 10px;
+    width: 380px;
+    margin: 0 auto;
+    
+}
+.registerWrapper>.verify>input{
+    display: block;
+    font-size: 20px;
+    line-height: 40px;
+    float: left;
+    /* border: 1px solid #e9e9e9; */
+    /* border-right: 0; */
+    border: 0;
+    width: 40%;
+    /* outline: none; */
+}
+.registerWrapper>.verify>.divide{
+    float: left;
+    width: 0;
+    height: 30px;
+    border: 1px solid #e9e9e9;
+    /* margin: 5px 28px; */
+    margin: 5px 0 5px 38px;
+}
+.registerWrapper>.verify>#send{
+    float: left;
+    height: 40px;
+    background-color: white;
+    border: none;
+    display: block;
+    font-size: 20px;
+    width: 40%;
+    margin-left: 28px;
+}
+.registerWrapper>.pwd>input{
+    display: block;
+    font-size: 20px;
+    line-height: 40px;
+    width: 380px;
+    margin: 20px auto;
+    border: 1px solid #e9e9e9;
+    border-radius: 10px 10px 10px 10px; 
+}
+.registerWrapper>.back{
+    width: 380px;
+    margin: 20px auto;
+}
+.registerWrapper>.back> a{
+    text-decoration: none;
+    /* color: white;     */
+    color: black;
+}
+.registerWrapper>.back>a:hover{
+    color: blue;
+}
+.registerWrapper>button{
+    width: 380px;
+    margin: 0 auto 20px auto;
+    display: block;
+    height: 40px;
+    font-size: 20px;
+    background-color: rgb(248, 89, 89);
+    border-radius: 10px 10px 10px 10px;
+    border: 1px solid #e9e9e9;
+    color: white;
+}
+.loginWrapper{
+    background-color: white;
+    z-index: 1000;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.1);
+    flex: none;
+    width: 410px;
+    transition: transform 1s;
+}
+.registerWrapper{
+    background-color: white;
+    z-index: 1000;
+    width: 410px;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.1);
+    /* box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75); */
+    flex: none;
+    transition: transform 1s;
+}
+.loginWrapper.animate{
+    transform: translateX(-100%);
+}
+.registerWrapper.animate{
+    transform: translateX(-100%);
+}

@@ -1,0 +1,10 @@
+$(".loginWrapper>.back>a").on('click',function(){
+    $(".loginWrapper").toggleClass("animate");
+    $(".registerWrapper").toggleClass("animate");
+    console.log("clicked")
+});
+$(".registerWrapper>.back>a").on('click',function(){
+    $(".loginWrapper").toggleClass("animate");
+    $(".registerWrapper").toggleClass("animate");
+    console.log("clicked")
+});

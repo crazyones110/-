@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>登陆</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="carouselWrapper">
+        <div class="loginWrapper">
+            <div class="telreg">手机号登陆</div>
+            <div class="hr"></div>
+            <div class="tel">
+                <input type="text" placeholder="请输入手机号" name="tel" />
+                <div class="alert">用户名或密码错误</div>
+            </div>
+            <div class="tel">
+                <input type="text" placeholder="请输入密码" name="password" />
+            </div>
+            <!-- <div class="verify clearfix">
+                <input type="text" name="verify" placeholder="请输入验证码" />
+                <button id="send">发送验证码</button>
+            </div> -->
+            <div class="pwd" style="display: none">
+                <input type="text" placeholder="请输入密码" name="pwd1" />
+                <input type="text" placeholder="请再次输入密码" name="pwd2" />
+            </div>
+            <div class="back">
+                <a href="#">尚未注册?点击注册</a>
+            </div>
+            <button type="button" id="login">登陆</button>
+        </div>
+        <div class="registerWrapper">
+            <div class="telreg">手机号注册</div>
+            <div class="hr"></div>
+            <div class="tel">
+                <input type="text" placeholder="请输入手机号" name="tel">
+                <div class="alert">用户名或密码错误</div>
+            </div>
+            <div class="verify clearfix">
+                <input type="text" name="verify" placeholder="请输入验证码">
+                <div class="divide"></div>
+                <button id="send">发送验证码</button>
+            </div>
+            <div class="pwd">
+                <input type="text" placeholder="请输入密码" name="pwd1">
+                <input type="text" placeholder="请再次输入密码" name="pwd2">
+            </div>
+            <div class="back">
+                <a href="#">已有账号?点击登录</a>
+            </div>
+            <button type="button" id="register">注册</button>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
