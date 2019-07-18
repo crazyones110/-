@@ -16,11 +16,11 @@
             <div class="telreg">手机号登陆</div>
             <div class="hr"></div>
             <div class="tel">
-                <input type="text" placeholder="请输入手机号" name="tel" />
-                <div class="alert">用户名或密码错误</div>
+                <input id="login-tel" type="text" placeholder="请输入手机号" name="tel" />
+                <div class="alert" id="login-alert">用户名或密码错误</div>
             </div>
             <div class="tel">
-                <input type="text" placeholder="请输入密码" name="password" />
+                <input id="login-password" type="text" placeholder="请输入密码" name="password" />
             </div>
             <!-- <div class="verify clearfix">
                 <input type="text" name="verify" placeholder="请输入验证码" />
@@ -39,16 +39,17 @@
             <div class="telreg">手机号注册</div>
             <div class="hr"></div>
             <div class="tel">
-                <input type="text" placeholder="请输入手机号" name="tel">
-                <div class="alert">用户名或密码错误</div>
+                <input id="register-tel" type="text" placeholder="请输入手机号" name="tel">
+                <div class="alert" id="register-alert">手机号已注册</div>
             </div>
             <div class="verify clearfix">
-                <input type="text" name="verify" placeholder="请输入验证码">
+                <input id="register-verify" type="text" name="verify" placeholder="请输入验证码">
                 <button id="send">发送验证码</button>
             </div>
             <div class="pwd">
-                <input type="text" placeholder="请输入密码" name="pwd1">
-                <input type="text" placeholder="请再次输入密码" name="pwd2">
+                <input id="register-password" type="text" placeholder="请输入密码" name="pwd1">
+                <input id="register-password-again" type="text" placeholder="请再次输入密码" name="pwd2">
+                <div id="password-diff">两次密码不一样</div>
             </div>
             <div class="back">
                 <span>已有账号?点击登录</span>
