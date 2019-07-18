@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+body{
+    background-color: rgb(242, 242, 242);
+}
+a{
+    text-decoration: none;
+}
+main{
+    width: 63%;/*1140px*/
+    margin: 45px auto;
+    /* border: 1px solid red; */
+    /* background-color: white; */
+}
+/* .avatar_wrapper{
+
+} */
+.avatar_wrapper{
+    padding-left: 20px;
+    background-color: white;
+}
+.avatar_wrapper>.avatar,
+.avatar_wrapper>.username{
+    float: left;
+}
+.avatar_wrapper>.avatar{
+    margin-top: -20px;
+}
+.avatar_wrapper>.avatar>img{
+    width: 90px;
+    height: 90px;
+}
+.avatar_wrapper>.username{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 60px;
+    padding: 10px 10px;
+}
+
+.white{
+    background-color: white;
+    width: 100%;
+    height: 10px;
+}
+.body_wrapper{
+    margin-top: 20px;
+    /* border: 1px solid red; */
+}
+.body_wrapper>.favAndHisWrapper{
+    float: left;
+    width: 65%;
+    /* border: 1px solid red; */
+}
+.body_wrapper>.userinfo{
+    float: right;
+}
+.fav{
+    background-color: white;
+}
+.fav>.favButton>.clickFav,
+.fav>.favButton>.clickMore{
+    float: left;
+    height: 35px;
+    font-size: 18px;
+    line-height: 35px;
+    text-align: center;
+}
+.fav>.favButton>.clickFav{
+    padding: 0 16px;
+    /* border: 1px solid blue; */
+    /* box-shadow: 1px 1px 12px 0px rgba(0,0,0,0.75); */
+}
+.fav>.favButton>.clickMore{
+    padding-left: 17px;
+    padding: 0 17px;
+    box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.4);
+}
+.fav>.favButton>.clickMore>a:hover{
+    color: red;
+}
+.fav>.favBody{
+    height: 347px;
+}
+.fav>.favBody>.favText{
+    float: left;
+    width: 60%;
+    height: 302px;
+}
+.fav>.favBody>.favText>h3{
+    /* font-weight: bold; */
+    font-size: 18px;
+    text-align: center;
+    padding-top: 20px;
+}
+.fav>.favBody>.favText>div{
+    font-weight: normal;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 10px;
+}
+.fav>.favBody>.favText>h4{
+    font-size: 16px;
+    font-weight: normal;
+    padding: 10px 15px;
+}
+.fav>.favBody>.favImg{
+    float: left;
+    width: 40%;
+    /* height: 302px; */
+    padding: 0 30px;
+    box-sizing: border-box;
+    
+}
+.fav>.favBody>.favImg>img{
+    height: 302px;
+    width: 100%;
+}
+#history{
+    margin-top: 20px;
+}
+.userinfo{
+    /* border: 1px solid red; */
+    float: right;
+    width: 30%;
+    background-color: white;
+}
+.userinfo>.infoText{
+    box-sizing: border-box;
+    width: 80%;
+    margin: 15px auto;
+    /* border: 1px solid blue; */
+}
+/* .userinfo>.infoText>hr{
+    color: black;
+    border: 1px solid rgb(230, 230, 230);
+    z-index: 1000;
+} */
+.userinfo>.infoText>div.hr{
+    border: 1px solid rgb(230, 230, 230);
+    margin: 8px 0;
+    border-radius: 10px 10px 10px 10px;
+}
+.userinfo>.infoText>button{
+    background-color: white;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 10px 10px 10px 10px;
+    font-size: 20px;
+    width: 100%;
+    margin-top: 10px;
+}
