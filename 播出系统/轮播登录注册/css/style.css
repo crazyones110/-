@@ -48,11 +48,12 @@ body{
     position: absolute;
     right: 25px;
     top: 10px;
-    color: white;
+    color: red;
+    display: none;
 }
 .loginWrapper>.tel>input{
     display: block;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 40px;
     width: 380px;
     margin: 20px auto;
@@ -84,7 +85,7 @@ body{
 .loginWrapper>.verify>input{
     flex: none;
     display: block;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 40px;
     float: left;
     /* border: 1px solid #e9e9e9; */
@@ -104,7 +105,7 @@ body{
 }
 .loginWrapper>.pwd>input{
     display: block;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 40px;
     width: 380px;
     margin: 20px auto;
@@ -163,7 +164,8 @@ body{
     position: absolute;
     right: 25px;
     top: 10px;
-    color: white;
+    color: red;
+    display: none;
 }
 /* .registerWrapper>.tel>.alert.dis{
     position: absolute;
@@ -173,7 +175,7 @@ body{
 } */
 .registerWrapper>.tel>input{
     display: block;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 40px;
     width: 380px;
     margin: 20px auto;
@@ -202,7 +204,7 @@ body{
 }
 .registerWrapper>.verify>input{
     display: block;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 40px;
     float: left;
     border: 0;
@@ -215,12 +217,12 @@ body{
     background-color: white;
     border: none;
     display: block;
-    font-size: 20px;
+    font-size: 18px;
     width: 50%;
 }
 .registerWrapper>.pwd>input{
     display: block;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 40px;
     width: 380px;
     margin: 20px auto;
@@ -267,6 +269,7 @@ body{
     flex: none;
     width: 410px;
     transition: all 1s;
+    opacity: 1;
 }
 .registerWrapper{
     background-color: white;
@@ -286,4 +289,15 @@ body{
 .registerWrapper.animate{
     transform: translateX(-100%);
     opacity: 1;
+}
+
+.registerWrapper .pwd{
+    position: relative;
+}
+.registerWrapper .pwd>#password-diff{
+    position: absolute;
+    right: 6%;
+    bottom: 11%;
+    color: red;
+    display: none;
 }
