@@ -1,0 +1,163 @@
+//variables
+$border: 1px solid red 
+$deepgrey: rgb(242, 242, 242)
+$lightgrey: rgb(230, 230, 230) 
+
+//mixins
+=form
+  font-size: 14px
+  width: 390px
+  text-align: right
+  margin-bottom: 10px
+  input
+    height: 38px
+    border-radius: 5px
+    width: 258px
+    &:focus
+      outline: none
+      border: 1px solid #ce3d3a
+
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+body
+  width: 100vw
+  height: 100vh
+  background-color: $deepgrey
+.headerWrapper
+  display: flex
+  height: 57px
+  align-items: center
+  background-color: white
+  span
+    &:nth-child(1)
+      margin-right: auto
+      font-size: 20px
+      font-weight: bold
+      margin-left: 40px
+      color: black
+      cursor: default
+    &:nth-child(5)
+      margin-right: 40px
+    a
+      text-decoration: none
+      color: black
+      &:hover
+        // color: lighten(red, 20%)
+        color: #ef4037
+    @for $var from 2 through 5
+      &:nth-child(#{$var})
+        margin-left: 70px
+  //end-header
+
+.mainWrapper
+  // border: $border
+  background-color: white
+  position: relative
+  width: 1125px / 1812px * 100%
+  margin: 20px auto
+  height: 600px
+  padding: 15px
+  .mainHeader
+    position: absolute
+    top: 10px
+    right: 100%
+  .changeBody
+    .options
+      width: 100%
+      display: flex
+      border-bottom: 1px solid $lightgrey
+      margin-top: 10px
+      margin-bottom: 20px
+      .accountSetting
+        padding-bottom: 10px
+        border-bottom: 2px solid red
+        flex: none
+        font-size: 18px
+    .accountBlock
+      // border: $border
+      border-radius: 10px
+      border: 1px solid $lightgrey
+      margin-bottom: 20px
+      .accountBlockHeader
+        display: flex
+        align-items: center
+        background-color: $deepgrey
+        height: 60px
+        padding: 22px
+        &:hover
+          background-color: white
+      .accountBlockHeader.toggle
+        background-color: white
+      .settingName
+        font-size: 18px
+        width: 170px
+      .look
+        margin-left: auto
+        font-size: 14px
+        display: flex
+        align-items: center
+        cursor: pointer
+        svg
+          height: 14px
+          width: 14px
+      .accountBlockMain
+        position: relative
+        // border: $border
+        margin-top: 35px
+        &::before
+          position: absolute
+          height: 0px
+          width: calc(100% - 44px)
+          border: 1px dashed $lightgrey
+          bottom: calc(100% + 35px)
+          left: 22px
+          display: block
+          content: ''
+        .currentPassword
+          +form()
+        .newPassword
+          +form()
+        .newPasswordAgain
+          +form()
+        .buttonWrapper
+          width: 390px
+          text-align: center
+          button
+            cursor: pointer
+            padding: 8px 20px
+            color: white
+            font-size: 16px
+            border-radius: 16px
+            background-color: rgb(206, 61, 58)
+            outline: none
+            border-width: 0 
+            transform: translateX(-30px)
+            &:hover
+              background-color: #ef4037
+            &:active
+              background-color: #861613
+
+.password 
+  .accountBlockMain
+    display: none
+    padding: 22px
+.password 
+  .accountBlockMain.toggle
+    display: block
+    animation: toggle
+      fill-mode: forwards
+      timing-function: ease-in-out
+      duration: 300ms
+
+@keyframes toggle
+  0%
+    opacity: 0
+    transform: translateY(-30px)
+  100%
+    opacity: 1
+    transform: translateY(0)
+
+

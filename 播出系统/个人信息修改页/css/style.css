@@ -1,0 +1,91 @@
+* { margin: 0; padding: 0; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body { width: 100vw; height: 100vh; background-color: #f2f2f2; }
+
+.headerWrapper { display: -webkit-box; display: -ms-flexbox; display: flex; height: 57px; -webkit-box-align: center; -ms-flex-align: center; align-items: center; background-color: white; }
+
+.headerWrapper span:nth-child(1) { margin-right: auto; font-size: 20px; font-weight: bold; margin-left: 40px; color: black; cursor: default; }
+
+.headerWrapper span:nth-child(5) { margin-right: 40px; }
+
+.headerWrapper span a { text-decoration: none; color: black; }
+
+.headerWrapper span a:hover { color: #ef4037; }
+
+.headerWrapper span:nth-child(2) { margin-left: 70px; }
+
+.headerWrapper span:nth-child(3) { margin-left: 70px; }
+
+.headerWrapper span:nth-child(4) { margin-left: 70px; }
+
+.headerWrapper span:nth-child(5) { margin-left: 70px; }
+
+.mainWrapper { background-color: white; position: relative; width: 62.08609%; margin: 20px auto; height: 600px; padding: 15px; }
+
+.mainWrapper .mainHeader { position: absolute; top: 10px; right: 100%; }
+
+.mainWrapper .changeBody .options { width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; border-bottom: 1px solid #e6e6e6; margin-top: 10px; margin-bottom: 20px; }
+
+.mainWrapper .changeBody .options .accountSetting { padding-bottom: 10px; border-bottom: 2px solid red; -webkit-box-flex: 0; -ms-flex: none; flex: none; font-size: 18px; }
+
+.mainWrapper .changeBody .accountBlock { border-radius: 10px; border: 1px solid #e6e6e6; margin-bottom: 20px; }
+
+.mainWrapper .changeBody .accountBlock .accountBlockHeader { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; background-color: #f2f2f2; height: 60px; padding: 22px; }
+
+.mainWrapper .changeBody .accountBlock .accountBlockHeader:hover { background-color: white; }
+
+.mainWrapper .changeBody .accountBlock .accountBlockHeader.toggle { background-color: white; }
+
+.mainWrapper .changeBody .accountBlock .settingName { font-size: 18px; width: 170px; }
+
+.mainWrapper .changeBody .accountBlock .look { margin-left: auto; font-size: 14px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; cursor: pointer; }
+
+.mainWrapper .changeBody .accountBlock .look svg { height: 14px; width: 14px; }
+
+.mainWrapper .changeBody .accountBlock .accountBlockMain { position: relative; margin-top: 35px; }
+
+.mainWrapper .changeBody .accountBlock .accountBlockMain::before { position: absolute; height: 0px; width: calc(100% - 44px); border: 1px dashed #e6e6e6; bottom: calc(100% + 35px); left: 22px; display: block; content: ''; }
+
+.mainWrapper .changeBody .accountBlock .accountBlockMain .currentPassword { font-size: 14px; width: 390px; text-align: right; margin-bottom: 10px; }
+
+.mainWrapper .changeBody .accountBlock .accountBlockMain .currentPassword input { height: 38px; border-radius: 5px; width: 258px; }
+
+.mainWrapper .changeBody .accountBlock .accountBlockMain .currentPassword input:focus { outline: none; border: 1px solid #ce3d3a; }
+
+.mainWrapper .changeBody .accountBlock .accountBlockMain .newPassword { font-size: 14px; width: 390px; text-align: right; margin-bottom: 10px; }
+
+.mainWrapper .changeBody .accountBlock .accountBlockMain .newPassword input { height: 38px; border-radius: 5px; width: 258px; }
+
+.mainWrapper .changeBody .accountBlock .accountBlockMain .newPassword input:focus { outline: none; border: 1px solid #ce3d3a; }
+
+.mainWrapper .changeBody .accountBlock .accountBlockMain .newPasswordAgain { font-size: 14px; width: 390px; text-align: right; margin-bottom: 10px; }
+
+.mainWrapper .changeBody .accountBlock .accountBlockMain .newPasswordAgain input { height: 38px; border-radius: 5px; width: 258px; }
+
+.mainWrapper .changeBody .accountBlock .accountBlockMain .newPasswordAgain input:focus { outline: none; border: 1px solid #ce3d3a; }
+
+.mainWrapper .changeBody .accountBlock .accountBlockMain .buttonWrapper { width: 390px; text-align: center; }
+
+.mainWrapper .changeBody .accountBlock .accountBlockMain .buttonWrapper button { cursor: pointer; padding: 8px 20px; color: white; font-size: 16px; border-radius: 16px; background-color: #ce3d3a; outline: none; border-width: 0; -webkit-transform: translateX(-30px); transform: translateX(-30px); }
+
+.mainWrapper .changeBody .accountBlock .accountBlockMain .buttonWrapper button:hover { background-color: #ef4037; }
+
+.mainWrapper .changeBody .accountBlock .accountBlockMain .buttonWrapper button:active { background-color: #861613; }
+
+.password .accountBlockMain { display: none; padding: 22px; }
+
+.password .accountBlockMain.toggle { display: block; -webkit-animation: toggle; animation: toggle; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; -webkit-animation-timing-function: ease-in-out; animation-timing-function: ease-in-out; -webkit-animation-duration: 300ms; animation-duration: 300ms; }
+
+@-webkit-keyframes toggle { 0% { opacity: 0;
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px); }
+  100% { opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@keyframes toggle { 0% { opacity: 0;
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px); }
+  100% { opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
