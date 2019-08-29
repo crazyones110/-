@@ -19,7 +19,7 @@ body{
 }
 .carouselWrapper{
     width: 410px;
-    height: 435px;
+    /* height: 435px; */
     /* border: 1px solid red; */
     display: flex;
     justify-items: center;
@@ -122,6 +122,19 @@ body{
 .loginWrapper>.back>span:hover{
     color: blue;
 }
+.loginWrapper>.switch-login{
+    width: 380px;
+    margin: 20px auto;
+}
+/* .loginWrapper>.switch-login>span{
+    cursor: pointer;
+} */
+.loginWrapper>.switch-login a{
+    cursor: pointer;
+}
+.loginWrapper>.switch-login a:hover{
+    color: blue;
+}
 .loginWrapper>button{
     width: 380px;
     margin: 0 auto 20px auto;
@@ -149,16 +162,46 @@ body{
     margin-top: 20px;
     font-size: 20px;
 }
+.registerWrapper>.emailreg{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+.registerWrapper>.emailreg.hide{
+    display: none;
+}
+.registerWrapper>.telreg.hide{
+    display: none;
+}
+
 .registerWrapper>.hr{
     width: 380px;
     margin: 20px auto;
     border: 1px solid #e9e9e9;
+}
+registerWrapper .username{
+    height: 40px;
+    margin-bottom:20px; 
+    position: relative;
+    border: 1px solid red;    
+}
+.registerWrapper .username input{
+    display: block;
+    font-size: 18px;
+    line-height: 40px;
+    width: 380px;
+    margin: 20px auto;
+    border: 1px solid #e9e9e9;
+    border-radius: 10px 10px 10px 10px;
 }
 .registerWrapper>.tel{
     /* margin-top: 66px; */
     height: 40px;
     margin-bottom:20px; 
     position: relative;
+}
+.registerWrapper>.tel.hide{
+    display: none;
 }
 .registerWrapper>.tel>.alert{
     position: absolute;
@@ -174,6 +217,32 @@ body{
     color: red;
 } */
 .registerWrapper>.tel>input{
+    display: block;
+    font-size: 18px;
+    line-height: 40px;
+    width: 380px;
+    margin: 20px auto;
+    border: 1px solid #e9e9e9;
+    border-radius: 10px 10px 10px 10px;
+}
+.registerWrapper>.email{
+    /* margin-top: 66px; */
+    height: 40px;
+    margin-bottom:20px; 
+    position: relative;
+}
+.registerWrapper>.email.hide{
+    display: none;
+}
+.registerWrapper>.email>.alert{
+    position: absolute;
+    right: 25px;
+    top: 10px;
+    color: red;
+    display: none;
+}
+
+.registerWrapper>.email>input{
     display: block;
     font-size: 18px;
     line-height: 40px;
@@ -233,10 +302,19 @@ body{
     width: 380px;
     margin: 20px auto;
 }
-.registerWrapper>.back> span{
+.registerWrapper>.back>span{
     cursor: pointer;
 }
 .registerWrapper>.back>span:hover{
+    color: blue;
+}
+.registerWrapper>.back>span.switch-register{
+    float: right;
+}
+.registerWrapper>.back a{
+    cursor: pointer;
+}
+.registerWrapper>.back a:hover{
     color: blue;
 }
 .registerWrapper>button{
@@ -300,4 +378,29 @@ body{
     bottom: 11%;
     color: red;
     display: none;
+}
+.loginWrapper .back{
+    display: flex;
+}
+#forgetPassword{
+    margin-left: auto;
+}
+#forgetPassword>span:hover{
+    cursor: pointer;
+    color: blue;
+}
+.swiper-container{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+}
+.carouselWrapper{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
