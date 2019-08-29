@@ -8,9 +8,55 @@
     <title>登陆</title>
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <style>
+        .swiper-container {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .img1 {
+            width: 100vw;
+            height: 100vh;
+            background-color: red;
+        }
+
+        .img2 {
+            width: 100vw;
+            height: 100vh;
+            background-color: blue;
+        }
+
+        .img3 {
+            width: 100vw;
+            height: 100vh;
+            background-color: yellow;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="img1"></div>
+            </div>
+            <div class="swiper-slide">
+                <div class="img2"></div>
+            </div>
+            <div class="swiper-slide">
+                <div class="img3"></div>
+            </div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+
+        <!-- 如果需要导航按钮 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+    </div>
     <div class="carouselWrapper">
         <div class="loginWrapper">
             <div class="telreg">手机号登陆</div>
@@ -32,15 +78,27 @@
             </div>
             <div class="back">
                 <span>尚未注册?点击注册</span>
+                <div id="forgetPassword"><span>忘记密码?</span></div>
+            </div>
+            <div class="switch-login">
+                <span>使用<a>用户名</a>/<a>邮箱</a>登陆?</span>
             </div>
             <button type="button" id="login">登陆</button>
         </div>
         <div class="registerWrapper">
             <div class="telreg">手机号注册</div>
+            <div class="emailreg hide">邮箱注册</div>
             <div class="hr"></div>
+            <div class="username">
+                <input id="register-username" type="text" placeholder="请输入用户名" name="username">
+            </div>
             <div class="tel">
                 <input id="register-tel" type="text" placeholder="请输入手机号" name="tel">
                 <div class="alert" id="register-alert">手机号已注册</div>
+            </div>
+            <div class="email hide">
+                <input id="register-email" type="text" placeholder="请输入邮箱" name="email">
+                <div class="alert" id="register-alert">邮箱已注册</div>
             </div>
             <div class="verify clearfix">
                 <input id="register-verify" type="text" name="verify" placeholder="请输入验证码">
@@ -52,12 +110,34 @@
                 <div id="password-diff">两次密码不一样</div>
             </div>
             <div class="back">
-                <span>已有账号?点击登录</span>
+                <span class="login-back">已有账号?点击登录</span>
+                <span class="switch-register">
+                    使用邮箱注册?
+                </span>
             </div>
             <button type="button" id="register">注册</button>
         </div>
     </div>
+
     <script src="js/main.js"></script>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            //direction: 'vertical', // 垂直切换选项
+            loop: true, // 循环模式选项
+
+            // 如果需要分页器
+            pagination: {
+                el: '.swiper-pagination', 
+                clickable:true
+            },
+
+            // 如果需要前进后退按钮
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        })        
+        </script>
 </body>
 
 </html>
