@@ -2,9 +2,14 @@ $(".loginWrapper>.back>span").on('click', function () {
     $(".loginWrapper").toggleClass("animate");
     $(".registerWrapper").toggleClass("animate");
 });
-$(".registerWrapper>.back>span").on('click', function () {
+$(".registerWrapper>.back>span.login-back").on('click', function () {
     $(".loginWrapper").toggleClass("animate");
     $(".registerWrapper").toggleClass("animate");
+});
+$(".registerWrapper>.back>span.switch-register").on('click', function () {
+    $(".registerWrapper>.emailreg").toggleClass("hide").siblings(".telreg").toggleClass("hide")
+    $(".registerWrapper>.email").toggleClass("hide").siblings(".tel").toggleClass("hide")
+    this.innerText = this.innerText === "使用手机号注册?" ? "使用邮箱注册?" : "使用手机号注册?"
 });
 
 var bt01 = document.getElementById("send");
@@ -50,7 +55,7 @@ $(document).ready(function () {
                 // window.history.back()
                 console.log(document.referrer)
                 if(document.referrer === ""){
-                    window.location.href = "../../article_ls.html"
+                    window.location.href = "../../grid重构文章列表页/article_ls.html"
                 }else{
                     window.location.href = document.referrer + `?Authorization=${xhr.getResponseHeader("Authorization")}`
                 }
@@ -103,7 +108,7 @@ $(document).ready(function () {
                 alert("注册成功")
                 console.log()
                 if(document.referrer === ""){
-                    window.location.href = "../../article_ls.html"
+                    window.location.href = "../../grid重构文章列表页/article_ls.html"
                 }else{
                     window.location.href = document.referrer
                     //注册的话后台没返回Authorization
@@ -114,9 +119,62 @@ $(document).ready(function () {
         })
     })
 });
+
+// $("#forgetPassword>span").on("click",()=>{
+//     $.ajax({
+//         url:
+//     })
+// })
+
 //点击input的时候,即foucs状态的时候，把"手机号或密码错误那行红字隐藏"
 $("input").bind("input propertychange", function (event) {
     $(".loginWrapper .alert").css("display", "none")
     $(".registerWrapper .alert").css("display", "none")
     $("#password-diff").css("display", "none")
 });
+
+
+
+// button.onclick = () => {
+//     let obj = {name:"fan",idol:"Nadal"};
+//     let string = $.param(obj);
+//     $.ajax({
+//         url: "/xxx?" + string,
+//         method: "post",
+//         contentType:"application/json;charset=utf-8",//请求的格式
+//         dataType:"json",//响应的格式
+//         data: JSON.stringify({
+//             school: "seu",
+//             sport: "tennis",
+//         }),
+//     }).then((responseText)=>{
+//         console.log(responseText)
+//         console.log("success")
+//     },
+//         (request)=>{
+//             console.log(request)
+//             console.log("fail")
+//         }
+//     )
+// }
+// button.onclick = () => {
+//     $.ajax({
+//         url: "/xxx",
+//         method: "get",
+//         contentType: "application/x-www-form-urlencoded;charset=utf-8",//请求的格式
+//         dataType: "json",//响应的格式
+//         data: "hello world=nadal",
+//         // data:{
+//         //     school:"seu",
+//         //     idol:"Nadal",
+//         // }
+//     }).then((responseText) => {
+//         console.log(responseText)
+//         console.log("success")
+//     },
+//         (request) => {
+//             console.log(request)
+//             console.log("fail")
+//         }
+//     )
+// }
