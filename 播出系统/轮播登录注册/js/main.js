@@ -11,6 +11,31 @@ $(".registerWrapper>.back>span.switch-register").on('click', function () {
     $(".registerWrapper>.email").toggleClass("hide").siblings(".tel").toggleClass("hide")
     this.innerText = this.innerText === "使用手机号注册?" ? "使用邮箱注册?" : "使用手机号注册?"
 });
+$("#switchto-username-login").on("click", function(){
+    $(".login-header>.usernamelogin").removeClass("hide").siblings(".tellogin").addClass("hide")
+    .siblings(".emaillogin").addClass("hide")
+    $(this).addClass("hide").siblings("#switchto-tel-login").removeClass("hide")
+    .siblings("#switchto-email-login").removeClass("hide")
+    $(".username-login-input").show().siblings(".email-login-input").hide()
+    .siblings(".tel-login-input").hide()
+})
+$("#switchto-email-login").on("click", function(){
+    $(".login-header>.emaillogin").removeClass("hide").siblings(".tellogin").addClass("hide")
+    .siblings(".usernamelogin").addClass("hide")
+    $(this).addClass("hide").siblings("#switchto-tel-login").removeClass("hide")
+    .siblings("#switchto-username-login").removeClass("hide")
+    $(".email-login-input").show().siblings(".tel-login-input").hide()
+    .siblings(".username-login-input").hide()
+})
+$("#switchto-tel-login").on("click", function(){
+    $(".login-header>.tellogin").removeClass("hide").siblings(".usernamelogin").addClass("hide")
+    .siblings(".emaillogin").addClass("hide")
+    $(this).addClass("hide").siblings("#switchto-username-login").removeClass("hide")
+    .siblings("#switchto-email-login").removeClass("hide")
+    $(".tel-login-input").show().siblings(".email-login-input").hide()
+    .siblings(".username-login-input").hide()
+})
+//以上都是控制样式的js代码，不要看
 
 var bt01 = document.getElementById("send");
 bt01.onclick = function () {
